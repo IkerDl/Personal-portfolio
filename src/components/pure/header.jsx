@@ -6,6 +6,8 @@ import { FaGithub } from "react-icons/fa6";
 import ReactModal from 'react-modal';
 import { SiGmail } from "react-icons/si";
 
+import '../../styles/headerStyle.scss';
+
 ReactModal.setAppElement('#root');
 
 const Header = () => {
@@ -38,38 +40,37 @@ const Header = () => {
 
 
     return (
-        <div className='navbar' style={{ backgroundColor:'#333', color: '#fff',  padding: '10px, 20px'}}>
-            <div className='nav-link' 
-                style={{display: 'flex', alignItems: 'center'}}>
+        <div className='navbar'>
+            <div className='nav-link'>
                 <div className='logo'>
                     <Link to={'/'}>
-                        <img src={logosinfondo} alt='logo' onClick={Navigate('/')} style={{maxWidth:'150px', marginLeft:'20px', height:'55px'}}/>
+                        <img src={logosinfondo} alt='logo' onClick={Navigate('/')} />
                     </Link>
                 </div>
-                <div className='text-wrapper' style={{display: 'flex', justifyContent:'space-between', alignItems:'center', width:'100%', margin:'0 25px 0 40%'}}>
-                    <Link to="/blog" style={{ textDecoration: 'none', color: 'inherit',  }}><h3>Blog</h3></Link>
-                    <a href='https://www.linkedin.com/in/iker-delgado-l%C3%B3pez-9b14a9193/' style={{textDecoration:'none', color: 'rgb(255, 255, 255)'}} >
-                        <FaLinkedin style={{fontSize:'2.5em'}}/>
+                <div className='text-wrapper'>
+                    <Link to="/blog"><h3>Blog</h3></Link>
+                    <a href='https://www.linkedin.com/in/iker-delgado-l%C3%B3pez-9b14a9193/' >
+                        <FaLinkedin className='linkedinIcon'/>
                     </a>
-                    <a href='https://github.com/IkerDl?tab=repositories' style={{textDecoration:'none', color: 'rgb(255, 255, 255)' }} >
-                        <FaGithub style={{fontSize: '2.5em'}} />
+                    <a href='https://github.com/IkerDl?tab=repositories' >
+                        <FaGithub className='githubIcon' />
                     </a>
                 
-                    <button style={{ fontSize: '1.17em', fontWeight: 'bold', padding: '2px'  ,color:'#FFFFFF' , border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }} onClick={openModal}>
-                        Let's talk 📭
+                    <button onClick={openModal}>
+                       <h3>Let's talk 📭</h3>
                     </button>
                     <ReactModal
+                        
                         isOpen={modalIsOpen}               
                         style={customStyles}
                         contentLabel="Example Modal"
                     >
                         <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Cómo puedo ayudarte ?</h2>
-                        <div>
-                            {<SiGmail />} <a style={{textDecoration: 'none'}} href="mailto:iker.dlp.21@gmail.com">Contactar via email</a>
+                        <div className='modalsBody'>
+                            {<SiGmail/>} <a id='gmailText' href="mailto:iker.dlp.21@gmail.com">Contactar con Iker</a>
                         </div>
-                        
 
-                        <button style={{margin:'5px'}} onClick={openModal}>Close</button>
+                        <button onClick={openModal}>Cerrar</button>
                     
                         
                     </ReactModal>

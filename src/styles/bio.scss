@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=McLaren&family=Noto+Sans+Sogdian&family=Ojuju:wght@200..800&display=swap');
+
+.bio-component {
+    width: 100%;
+    font-style: normal;
+}
+
+.bioContainer {
+    display: flex;
+    background-color: #fff;
+    padding: 70px 20px;
+}
+
+.text {
+    display: grid;
+    align-items: center;
+    padding-right: 150px;
+    padding-left: 150px;
+}
+
+.imgContainer {
+    width: 70%;
+    border-radius: 50%;
+}
+
+.imgContainer img {
+    width: 250px;
+    display: block;
+    border-radius: 100px;
+}
+
+/* For Mobile */ 
+@media screen and (max-width: 768px) {
+    .bioContainer {
+       padding: 60px 10px;
+    }
+
+    .text {
+        display: grid;
+        width: 100%;
+        align-items: center;
+        margin-left: 10px;
+        padding: 0 10px;
+    }
+
+    .text h1 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .imgContainer img {
+        width: 180px;
+        margin-right: 0;
+        margin-bottom: 20px;
+
+    }
+    
+
+} 

@@ -11,7 +11,6 @@ const HomePage = () => {
             <Header />
             <BioSection />
             <ProjectsList />
-            <Modal />
         </div>
     );
 }

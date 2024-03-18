@@ -1,60 +1,168 @@
 // projectsList.scss
 
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=McLaren&family=Noto+Sans+Sogdian&family=Ojuju:wght@200..800&display=swap');
+
+
 .projects-container {
     padding: 20px;
+    font-family: "Noto Sans Sogdian", sans-serif;
   }
   
-  .projects-wrapper {
-    display: flex;
-    width: auto;
-    margin-top: 25px;
+.projects-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.projects-wrapper .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.projects-wrapper .card .card-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
+}
+
+.projects-wrapper .card:hover .card-content {
+  transform: translateY(-20px);
+}
+
+.projects-wrapper .card .card-content .imgBx {
+  position: relative;
+  width: 100%;
+  height: 145px;
+  overflow: hidden;
+} 
+
+.projects-wrapper .card .card-content .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projects-wrapper .card .card-content .contentBx h2 {
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+  max-height: 60px;
+  overflow: hidden;
+}
+
+.projects-wrapper .card .sci {
+  bottom: 50px;
+  display: flex;
+  height: 36px;
+}
+
+.projects-wrapper .card .sci p {
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.projects-wrapper .card:hover .sci p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* For Mobile */ 
+@media screen and (max-width: 768px) {
+  .projects-container h1 {
+    font-size: 1.5em;
+  }
+
+  // .projects-wrapper .card {
+  //   width: 300px;
+  //   height: 400px;
+  // }
+
+  .projects-wrapper .card {
+    width: 300px;
+    height: auto;
   }
   
-  .card {
-    width: 50%;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Añade espacio entre cada proyecto */
-    margin-left: 10px;
-  }
-  
-  .card-content {
-    background-color: #ffffff;
-    padding: 20px;
-    cursor: pointer;
-  }
-  
-  .banner-holder {
-    overflow: hidden;
+  .projects-wrapper .card .card-content {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
   }
   
-  .banner {
-    width: 100%;
+  .projects-wrapper .card:hover .card-content {
+    transform: translateY(-10px);
+  }
+  
+  .projects-wrapper .card .card-content .imgBx {
+    position: relative;
+    width: 200px;
     height: 150px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+  } 
+  
+  .projects-wrapper .card .card-content .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
   }
   
-  .container-fluid.content-holder {
-    padding-top: 20px; /* Añade espacio entre la imagen y el contenido */
+  .projects-wrapper .card .card-content .contentBx h2 {
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+    max-height: 50px;
   }
   
-  .inner-content {
-    background-color: #fff;
+  .projects-wrapper .card .sci {
+    bottom: 50px;
+    display: flex;
+    height: auto;
   }
   
-  .title {
-    margin: 10px 0 15px 0;
-    font-weight: bold;
+  .projects-wrapper .card .sci p {
+    margin: 0 10px;
+    transform: translateY(40px);
+    transition: 0.2s;
+    opacity: 0;
   }
   
-  .description {
-    font-size: 14px;
-    line-height: 1.5;
-    opacity: 0.8;
+  .projects-wrapper .card:hover .sci p {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
+
+
+
+}   

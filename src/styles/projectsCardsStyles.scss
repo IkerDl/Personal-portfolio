@@ -1,0 +1,9 @@
+.container-fluid.content-holder {
+    transition: transform 0.5s ease;
+}
+
+.container-fluid.content-holder :hover {
+    
+    transform : scale(1.2);
+}
+

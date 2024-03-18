@@ -6,7 +6,7 @@ const Blog = () => {
         <div>
             <Header />
             <h1>Mi blog personal 👨‍💻</h1>
-            <p>Aquí iran los posts </p>
+            <p>Blog aún en desarrollo...</p>
         </div>
     );
 }
