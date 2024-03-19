@@ -106,11 +106,11 @@
 }
 
 /* For Mobile */ 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 390px) {
     .nav-link img {
         max-width: 150px;
         margin-left: 10px;
-        height: 50px;
+        height: 40px;
         padding: 5px;
     
     }
@@ -119,9 +119,37 @@
          margin: 5px;
     }
 
+    .text-wrapper h3 {
+        font-size: 15px;
+   }
+
     .linkedinIcon, .githubIcon {
         font-size: 1.5em;
-        margin-right: 5px;
+        margin: 0px 7px 0px 7px;
+    }
+
+}   
+
+@media screen and (max-width: 720px) {
+    .nav-link img {
+        max-width: 150px;
+        margin-left: 10px;
+        height: 40px;
+        padding: 5px;
+    
+    }
+
+    .text-wrapper {
+         margin: 5px;
+    }
+
+    .text-wrapper h3 {
+        font-size: 15px;
+   }
+
+    .linkedinIcon, .githubIcon {
+        font-size: 1.5em;
+        margin: 0px 7px 0px 7px;
     }
 
 }   
